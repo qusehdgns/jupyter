@@ -1,0 +1,57 @@
+#---------------------------
+import csv
+f = open('seoul.csv')
+data = csv.reader(f)
+next(data)
+result = []
+
+for row in data :
+    if row[-1] != '' :
+        result.append(float(row[-1]))
+plt.boxplot(result)
+plt.show()
+
+#---------------------------
+sample_1 = pd.read_excel('sample_1.xlsx', 
+                         header=1, 
+                         skipfooter=2, 
+                         usecols='A:C')
+
+#---------------------------
+conditions = (sample_1['惫利内靛'] == 'A01') \
+                | (sample_1['惫利内靛'] == 'A18')
+sample_1[conditions]
+
+#----------------------------------------
+sample_c = pd.concat([sample_1_code, sample_2_code], ignore_index=True)
+sample_c
+
+#----------------------------------------
+from selenium import webdriver
+
+#-------------------------
+! pip install selenium
+
+#-------------------------
+https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+#-------------------------
+from selenium import webdriver
+driver = webdriver.Chrome('d:/tool/chromedriver.exe')
+
+#-------------------------
+www.melon.com/chart/index.htm
+
+#-------------------------
+html = '''
+
+'''
+print(html)
+
+#-------------------------
+from bs4 import BeautifulSoup
+
+#-------------------------
+soup = BeautifulSoup(html, 'html.parser')
+
+#-------------------------
